@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>21-项目部署 | 爱笔记</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/vblog/img/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,02.vue,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,02.vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/vblog/assets/css/0.styles.6e7cac70.css" as="style"><link rel="preload" href="/vblog/assets/js/app.b6320eca.js" as="script"><link rel="preload" href="/vblog/assets/js/2.0faa9b21.js" as="script"><link rel="preload" href="/vblog/assets/js/137.48a82b15.js" as="script"><link rel="prefetch" href="/vblog/assets/js/10.e330fbd4.js"><link rel="prefetch" href="/vblog/assets/js/100.13de2926.js"><link rel="prefetch" href="/vblog/assets/js/101.87c16044.js"><link rel="prefetch" href="/vblog/assets/js/102.f7999bc5.js"><link rel="prefetch" href="/vblog/assets/js/103.aeefa1a1.js"><link rel="prefetch" href="/vblog/assets/js/104.3a34f993.js"><link rel="prefetch" href="/vblog/assets/js/105.6c2a427f.js"><link rel="prefetch" href="/vblog/assets/js/106.a81b9152.js"><link rel="prefetch" href="/vblog/assets/js/107.4412cd81.js"><link rel="prefetch" href="/vblog/assets/js/108.7d9e19f9.js"><link rel="prefetch" href="/vblog/assets/js/109.ab59f981.js"><link rel="prefetch" href="/vblog/assets/js/11.b006cfa5.js"><link rel="prefetch" href="/vblog/assets/js/110.80f6dd11.js"><link rel="prefetch" href="/vblog/assets/js/111.588f8e21.js"><link rel="prefetch" href="/vblog/assets/js/112.2b2ccee2.js"><link rel="prefetch" href="/vblog/assets/js/113.9c9bc743.js"><link rel="prefetch" href="/vblog/assets/js/114.37e1f7fc.js"><link rel="prefetch" href="/vblog/assets/js/115.2250af4e.js"><link rel="prefetch" href="/vblog/assets/js/116.f2629341.js"><link rel="prefetch" href="/vblog/assets/js/117.d9e2d606.js"><link rel="prefetch" href="/vblog/assets/js/118.78ef6a33.js"><link rel="prefetch" href="/vblog/assets/js/119.1dc71f40.js"><link rel="prefetch" href="/vblog/assets/js/12.19c875e1.js"><link rel="prefetch" href="/vblog/assets/js/120.d7c65660.js"><link rel="prefetch" href="/vblog/assets/js/121.75f615e3.js"><link rel="prefetch" href="/vblog/assets/js/122.e677ba1b.js"><link rel="prefetch" href="/vblog/assets/js/123.fa3dfbed.js"><link rel="prefetch" href="/vblog/assets/js/124.7131b453.js"><link rel="prefetch" href="/vblog/assets/js/125.d8cf9d86.js"><link rel="prefetch" href="/vblog/assets/js/126.36b17f5a.js"><link rel="prefetch" href="/vblog/assets/js/127.75955019.js"><link rel="prefetch" href="/vblog/assets/js/128.06567563.js"><link rel="prefetch" href="/vblog/assets/js/129.5fca0a3d.js"><link rel="prefetch" href="/vblog/assets/js/13.def75ff9.js"><link rel="prefetch" href="/vblog/assets/js/130.2481a248.js"><link rel="prefetch" href="/vblog/assets/js/131.f43c9930.js"><link rel="prefetch" href="/vblog/assets/js/132.2ada2fbb.js"><link rel="prefetch" href="/vblog/assets/js/133.c1c0e4e9.js"><link rel="prefetch" href="/vblog/assets/js/134.9d77a229.js"><link rel="prefetch" href="/vblog/assets/js/135.444bc878.js"><link rel="prefetch" href="/vblog/assets/js/136.0080ca73.js"><link rel="prefetch" href="/vblog/assets/js/138.317e25cc.js"><link rel="prefetch" href="/vblog/assets/js/139.9ceda83b.js"><link rel="prefetch" href="/vblog/assets/js/14.29ea5d41.js"><link rel="prefetch" href="/vblog/assets/js/140.b0a98a3d.js"><link rel="prefetch" href="/vblog/assets/js/141.7b6ce56a.js"><link rel="prefetch" href="/vblog/assets/js/142.528326b0.js"><link rel="prefetch" href="/vblog/assets/js/143.68df4139.js"><link rel="prefetch" href="/vblog/assets/js/144.1416a191.js"><link rel="prefetch" href="/vblog/assets/js/145.6dba1be7.js"><link rel="prefetch" href="/vblog/assets/js/146.de05222c.js"><link rel="prefetch" href="/vblog/assets/js/147.21457024.js"><link rel="prefetch" href="/vblog/assets/js/148.dad286bf.js"><link rel="prefetch" href="/vblog/assets/js/149.b435df33.js"><link rel="prefetch" href="/vblog/assets/js/15.271506ad.js"><link rel="prefetch" href="/vblog/assets/js/150.adaaf435.js"><link rel="prefetch" href="/vblog/assets/js/151.74b9f820.js"><link rel="prefetch" href="/vblog/assets/js/152.eff8ee59.js"><link rel="prefetch" href="/vblog/assets/js/153.27fa5220.js"><link rel="prefetch" href="/vblog/assets/js/154.373e2c1a.js"><link rel="prefetch" href="/vblog/assets/js/155.d2e15192.js"><link rel="prefetch" href="/vblog/assets/js/156.7f94293d.js"><link rel="prefetch" href="/vblog/assets/js/157.9fe2781c.js"><link rel="prefetch" href="/vblog/assets/js/158.f4b9a0fd.js"><link rel="prefetch" href="/vblog/assets/js/159.e74b6be5.js"><link rel="prefetch" href="/vblog/assets/js/16.d592b4d5.js"><link rel="prefetch" href="/vblog/assets/js/160.b0a95c7d.js"><link rel="prefetch" href="/vblog/assets/js/161.1145483e.js"><link rel="prefetch" href="/vblog/assets/js/162.2a0827bf.js"><link rel="prefetch" href="/vblog/assets/js/163.d54bb2c6.js"><link rel="prefetch" href="/vblog/assets/js/164.805f3e1d.js"><link rel="prefetch" href="/vblog/assets/js/165.bd1fcbc9.js"><link rel="prefetch" href="/vblog/assets/js/166.86ffa3fc.js"><link rel="prefetch" href="/vblog/assets/js/167.ff3d5148.js"><link rel="prefetch" href="/vblog/assets/js/168.6296b56b.js"><link rel="prefetch" href="/vblog/assets/js/169.9682ea0d.js"><link rel="prefetch" href="/vblog/assets/js/17.39e8ce3a.js"><link rel="prefetch" href="/vblog/assets/js/170.41103bbb.js"><link rel="prefetch" href="/vblog/assets/js/171.a32d4319.js"><link rel="prefetch" href="/vblog/assets/js/172.2cf8d05f.js"><link rel="prefetch" href="/vblog/assets/js/173.8038468b.js"><link rel="prefetch" href="/vblog/assets/js/174.500a0b1b.js"><link rel="prefetch" href="/vblog/assets/js/175.06efac78.js"><link rel="prefetch" href="/vblog/assets/js/176.d1340b0c.js"><link rel="prefetch" href="/vblog/assets/js/177.3b0c0bc9.js"><link rel="prefetch" href="/vblog/assets/js/178.b6fbf0d7.js"><link rel="prefetch" href="/vblog/assets/js/179.48c6c5d3.js"><link rel="prefetch" href="/vblog/assets/js/18.7590695c.js"><link rel="prefetch" href="/vblog/assets/js/180.caea6212.js"><link rel="prefetch" href="/vblog/assets/js/181.e29ee232.js"><link rel="prefetch" href="/vblog/assets/js/182.84545005.js"><link rel="prefetch" href="/vblog/assets/js/183.f91762c7.js"><link rel="prefetch" href="/vblog/assets/js/184.d04103f5.js"><link rel="prefetch" href="/vblog/assets/js/185.b185e338.js"><link rel="prefetch" href="/vblog/assets/js/186.665a058b.js"><link rel="prefetch" href="/vblog/assets/js/187.97b3e94e.js"><link rel="prefetch" href="/vblog/assets/js/188.54db93ca.js"><link rel="prefetch" href="/vblog/assets/js/189.6f57b045.js"><link rel="prefetch" href="/vblog/assets/js/19.3710e27c.js"><link rel="prefetch" href="/vblog/assets/js/190.50b7b357.js"><link rel="prefetch" href="/vblog/assets/js/191.ce47de70.js"><link rel="prefetch" href="/vblog/assets/js/192.02940b43.js"><link rel="prefetch" href="/vblog/assets/js/193.f7486305.js"><link rel="prefetch" href="/vblog/assets/js/194.1c46e736.js"><link rel="prefetch" href="/vblog/assets/js/195.04be6992.js"><link rel="prefetch" href="/vblog/assets/js/196.cef1623b.js"><link rel="prefetch" href="/vblog/assets/js/197.dfa29785.js"><link rel="prefetch" href="/vblog/assets/js/198.31556f43.js"><link rel="prefetch" href="/vblog/assets/js/199.1ac73a57.js"><link rel="prefetch" href="/vblog/assets/js/20.5e5b251d.js"><link rel="prefetch" href="/vblog/assets/js/200.2c48f023.js"><link rel="prefetch" href="/vblog/assets/js/201.920b5dde.js"><link rel="prefetch" href="/vblog/assets/js/202.de29242d.js"><link rel="prefetch" href="/vblog/assets/js/203.3702e00d.js"><link rel="prefetch" href="/vblog/assets/js/204.5667c4de.js"><link rel="prefetch" href="/vblog/assets/js/21.23ecf42c.js"><link rel="prefetch" href="/vblog/assets/js/22.f197299f.js"><link rel="prefetch" href="/vblog/assets/js/23.b489393b.js"><link rel="prefetch" href="/vblog/assets/js/24.44d21ce7.js"><link rel="prefetch" href="/vblog/assets/js/25.9cf7f801.js"><link rel="prefetch" href="/vblog/assets/js/26.a8cc4a7e.js"><link rel="prefetch" href="/vblog/assets/js/27.b3312d56.js"><link rel="prefetch" href="/vblog/assets/js/28.c4207f3e.js"><link rel="prefetch" href="/vblog/assets/js/29.fef6d60f.js"><link rel="prefetch" href="/vblog/assets/js/3.51d75923.js"><link rel="prefetch" href="/vblog/assets/js/30.4b39a00e.js"><link rel="prefetch" href="/vblog/assets/js/31.08799b84.js"><link rel="prefetch" href="/vblog/assets/js/32.f13096cb.js"><link rel="prefetch" href="/vblog/assets/js/33.3ff24937.js"><link rel="prefetch" href="/vblog/assets/js/34.e9ab2a6d.js"><link rel="prefetch" href="/vblog/assets/js/35.dda4deb3.js"><link rel="prefetch" href="/vblog/assets/js/36.5364ee11.js"><link rel="prefetch" href="/vblog/assets/js/37.b136f999.js"><link rel="prefetch" href="/vblog/assets/js/38.b1821d65.js"><link rel="prefetch" href="/vblog/assets/js/39.1d464a09.js"><link rel="prefetch" href="/vblog/assets/js/4.63b50ebd.js"><link rel="prefetch" href="/vblog/assets/js/40.ef1729db.js"><link rel="prefetch" href="/vblog/assets/js/41.bb4ed4f5.js"><link rel="prefetch" href="/vblog/assets/js/42.956d0a68.js"><link rel="prefetch" href="/vblog/assets/js/43.fba2c0ca.js"><link rel="prefetch" href="/vblog/assets/js/44.28ec5467.js"><link rel="prefetch" href="/vblog/assets/js/45.bb418975.js"><link rel="prefetch" href="/vblog/assets/js/46.bb83e9ce.js"><link rel="prefetch" href="/vblog/assets/js/47.6f1f6710.js"><link rel="prefetch" href="/vblog/assets/js/48.0fdf2798.js"><link rel="prefetch" href="/vblog/assets/js/49.d2fe3ba7.js"><link rel="prefetch" href="/vblog/assets/js/5.a58b848f.js"><link rel="prefetch" href="/vblog/assets/js/50.96bb04f7.js"><link rel="prefetch" href="/vblog/assets/js/51.1a635bc1.js"><link rel="prefetch" href="/vblog/assets/js/52.077355c4.js"><link rel="prefetch" href="/vblog/assets/js/53.14d962c9.js"><link rel="prefetch" href="/vblog/assets/js/54.003fc825.js"><link rel="prefetch" href="/vblog/assets/js/55.a243a5b8.js"><link rel="prefetch" href="/vblog/assets/js/56.3af79248.js"><link rel="prefetch" href="/vblog/assets/js/57.86bc0eab.js"><link rel="prefetch" href="/vblog/assets/js/58.7e1378f4.js"><link rel="prefetch" href="/vblog/assets/js/59.290e7d61.js"><link rel="prefetch" href="/vblog/assets/js/6.356e89a7.js"><link rel="prefetch" href="/vblog/assets/js/60.9efde758.js"><link rel="prefetch" href="/vblog/assets/js/61.f51a7df5.js"><link rel="prefetch" href="/vblog/assets/js/62.47d20163.js"><link rel="prefetch" href="/vblog/assets/js/63.79f96fa2.js"><link rel="prefetch" href="/vblog/assets/js/64.7682eefb.js"><link rel="prefetch" href="/vblog/assets/js/65.883d081c.js"><link rel="prefetch" href="/vblog/assets/js/66.df3b5569.js"><link rel="prefetch" href="/vblog/assets/js/67.24e32bf8.js"><link rel="prefetch" href="/vblog/assets/js/68.008668f3.js"><link rel="prefetch" href="/vblog/assets/js/69.fe7f0c75.js"><link rel="prefetch" href="/vblog/assets/js/7.919e648b.js"><link rel="prefetch" href="/vblog/assets/js/70.54402785.js"><link rel="prefetch" href="/vblog/assets/js/71.826e9306.js"><link rel="prefetch" href="/vblog/assets/js/72.5d780d2e.js"><link rel="prefetch" href="/vblog/assets/js/73.0328ceca.js"><link rel="prefetch" href="/vblog/assets/js/74.24d676d4.js"><link rel="prefetch" href="/vblog/assets/js/75.082e87a0.js"><link rel="prefetch" href="/vblog/assets/js/76.6ba24ed6.js"><link rel="prefetch" href="/vblog/assets/js/77.5d6f90eb.js"><link rel="prefetch" href="/vblog/assets/js/78.0be26ee6.js"><link rel="prefetch" href="/vblog/assets/js/79.00743b8b.js"><link rel="prefetch" href="/vblog/assets/js/8.23cb5725.js"><link rel="prefetch" href="/vblog/assets/js/80.dc9d7242.js"><link rel="prefetch" href="/vblog/assets/js/81.a63505f5.js"><link rel="prefetch" href="/vblog/assets/js/82.98fb00e0.js"><link rel="prefetch" href="/vblog/assets/js/83.ddfb8b8b.js"><link rel="prefetch" href="/vblog/assets/js/84.f5f52fff.js"><link rel="prefetch" href="/vblog/assets/js/85.41afac7e.js"><link rel="prefetch" href="/vblog/assets/js/86.13f43f6e.js"><link rel="prefetch" href="/vblog/assets/js/87.78001aae.js"><link rel="prefetch" href="/vblog/assets/js/88.4286e8b4.js"><link rel="prefetch" href="/vblog/assets/js/89.6e624c8a.js"><link rel="prefetch" href="/vblog/assets/js/9.06f5179f.js"><link rel="prefetch" href="/vblog/assets/js/90.b2545b0a.js"><link rel="prefetch" href="/vblog/assets/js/91.796a4cfa.js"><link rel="prefetch" href="/vblog/assets/js/92.b341e46f.js"><link rel="prefetch" href="/vblog/assets/js/93.b8dfe49c.js"><link rel="prefetch" href="/vblog/assets/js/94.4530be40.js"><link rel="prefetch" href="/vblog/assets/js/95.4f1f66e7.js"><link rel="prefetch" href="/vblog/assets/js/96.130dc9e9.js"><link rel="prefetch" href="/vblog/assets/js/97.d3798bc7.js"><link rel="prefetch" href="/vblog/assets/js/98.899c6a0c.js"><link rel="prefetch" href="/vblog/assets/js/99.5a7adf2e.js">
+    <link rel="stylesheet" href="/vblog/assets/css/0.styles.6e7cac70.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vblog/" class="home-link router-link-active"><img src="/vblog/img/qyp-logo.png" alt="爱笔记" class="logo"> <span class="site-name can-hide">爱笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/vblog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端文章</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vblog/pages/8143cc480faf9a11/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><!----> <a href="/vblog/pages/fa408e/" class="nav-link">css</a></li><li class="dropdown-item"><h4>Vue</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vblog/pages/def58a/" class="nav-link">基础内容</a></li><li class="dropdown-subitem"><a href="/vblog/pages/d199ed/" class="nav-link">组件化</a></li><li class="dropdown-subitem"><a href="/vblog/pages/694454/" class="nav-link">axios网络模块封装</a></li><li class="dropdown-subitem"><a href="/vblog/pages/190e59/" class="nav-link">CLI脚手架</a></li><li class="dropdown-subitem"><a href="/vblog/pages/13e7d4/" class="nav-link">Vue-router</a></li><li class="dropdown-subitem"><a href="/vblog/pages/4bea55/" class="nav-link">Vuex</a></li><li class="dropdown-subitem"><a href="/vblog/pages/0d7a1b/" class="nav-link">webpack相关知识</a></li><li class="dropdown-subitem"><a href="/vblog/pages/22713a22713a/" class="nav-link">vue进阶</a></li><li class="dropdown-subitem"><a href="/vblog/pages/4bea55/" class="nav-link">Vuex</a></li><li class="dropdown-subitem"><a href="/vblog/pages/5df7a3/" class="nav-link">antv框架</a></li><li class="dropdown-subitem"><a href="/vblog/pages/fb13a9/" class="nav-link">Uni-app</a></li><li class="dropdown-subitem"><a href="/vblog/pages/8e80a2/" class="nav-link">常用代码和json文件</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/vblog/webappframework/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/pages/1bbb46/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Django</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日记" class="dropdown-title"><a href="/vblog/diary/" class="link-title">日记</a> <span class="title" style="display:none;">日记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/pages/1663cb/" class="nav-link">日记</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/c40207/" class="nav-link">碎片</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/vblog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/vblog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/vblog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/vblog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/vblog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/vblog/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://s3.bmp.ovh/imgs/2021/11/0764ec15ea49d358.jpg"> <div class="blogger-info"><h3>zzzpandaQian</h3> <span></span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/vblog/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/vblog/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端文章</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vblog/pages/8143cc480faf9a11/" class="nav-link">JavaScript</a></li></ul></li><li class="dropdown-item"><!----> <a href="/vblog/pages/fa408e/" class="nav-link">css</a></li><li class="dropdown-item"><h4>Vue</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vblog/pages/def58a/" class="nav-link">基础内容</a></li><li class="dropdown-subitem"><a href="/vblog/pages/d199ed/" class="nav-link">组件化</a></li><li class="dropdown-subitem"><a href="/vblog/pages/694454/" class="nav-link">axios网络模块封装</a></li><li class="dropdown-subitem"><a href="/vblog/pages/190e59/" class="nav-link">CLI脚手架</a></li><li class="dropdown-subitem"><a href="/vblog/pages/13e7d4/" class="nav-link">Vue-router</a></li><li class="dropdown-subitem"><a href="/vblog/pages/4bea55/" class="nav-link">Vuex</a></li><li class="dropdown-subitem"><a href="/vblog/pages/0d7a1b/" class="nav-link">webpack相关知识</a></li><li class="dropdown-subitem"><a href="/vblog/pages/22713a22713a/" class="nav-link">vue进阶</a></li><li class="dropdown-subitem"><a href="/vblog/pages/4bea55/" class="nav-link">Vuex</a></li><li class="dropdown-subitem"><a href="/vblog/pages/5df7a3/" class="nav-link">antv框架</a></li><li class="dropdown-subitem"><a href="/vblog/pages/fb13a9/" class="nav-link">Uni-app</a></li><li class="dropdown-subitem"><a href="/vblog/pages/8e80a2/" class="nav-link">常用代码和json文件</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><a href="/vblog/webappframework/" class="link-title">后端</a> <span class="title" style="display:none;">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/pages/1bbb46/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Django</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日记" class="dropdown-title"><a href="/vblog/diary/" class="link-title">日记</a> <span class="title" style="display:none;">日记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/pages/1663cb/" class="nav-link">日记</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/c40207/" class="nav-link">碎片</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><a href="/vblog/more/" class="link-title">更多</a> <span class="title" style="display:none;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/pages/f2a556/" class="nav-link">学习</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/aea6571b7a8bae86/" class="nav-link">面试</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/2d615df9a36a98ed/" class="nav-link">心情杂货</a></li><li class="dropdown-item"><!----> <a href="/vblog/pages/baaa02/" class="nav-link">实用技巧</a></li><li class="dropdown-item"><!----> <a href="/vblog/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/vblog/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/vblog/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vblog/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/vblog/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/vblog/archives/" class="nav-link">归档</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>django</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vblog/pages/1bbb46/" aria-current="page" class="active sidebar-link">21-项目部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vblog/pages/1bbb46/#一、项目部署" class="sidebar-link">一、项目部署</a></li></ul></li><li><a href="/vblog/pages/e8312f/" class="sidebar-link">11-分页器</a></li><li><a href="/vblog/pages/169498/" class="sidebar-link">12-web请求生命周期分析</a></li><li><a href="/vblog/pages/2b989d/" class="sidebar-link">14-中间件</a></li><li><a href="/vblog/pages/b28a4e/" class="sidebar-link">04-django配置</a></li><li><a href="/vblog/pages/58a03f/" class="sidebar-link">18-Celery</a></li><li><a href="/vblog/pages/929b37/" class="sidebar-link">05-URLConf调度器</a></li><li><a href="/vblog/pages/c6952d/" class="sidebar-link">30-爬虫</a></li><li><a href="/vblog/pages/aeb742/" class="sidebar-link">13-验证码</a></li><li><a href="/vblog/pages/bbd414/" class="sidebar-link">20-REST framework</a></li><li><a href="/vblog/pages/588008/" class="sidebar-link">09-admin后台管理</a></li><li><a href="/vblog/pages/6f7a0e/" class="sidebar-link">17-缓存redis</a></li><li><a href="/vblog/pages/3143e4/" class="sidebar-link">10-会话技术</a></li><li><a href="/vblog/pages/00e240/" class="sidebar-link">23-富文本DjangoUeditor</a></li><li><a href="/vblog/pages/f5e243/" class="sidebar-link">16-信号signals</a></li><li><a href="/vblog/pages/811824/" class="sidebar-link">28-JWT</a></li><li><a href="/vblog/pages/689928/" class="sidebar-link">01-django介绍和相关术语</a></li><li><a href="/vblog/pages/d01245/" class="sidebar-link">25-项目开发流程</a></li><li><a href="/vblog/pages/799d64/" class="sidebar-link">27-模板jinja2引擎</a></li><li><a href="/vblog/pages/1d2b61/" class="sidebar-link">31-SerializerMethodField</a></li><li><a href="/vblog/pages/0b1edf/" class="sidebar-link">15-日志</a></li><li><a href="/vblog/pages/728676/" class="sidebar-link">26-邮箱验证和短信验证</a></li><li><a href="/vblog/pages/6ebc58/" class="sidebar-link">03-项目搭建</a></li><li><a href="/vblog/pages/7be7ab/" class="sidebar-link">19-DebugToolBar</a></li><li><a href="/vblog/pages/6767af/" class="sidebar-link">02-python虚拟环境</a></li><li><a href="/vblog/pages/08f014/" class="sidebar-link">06-模型</a></li><li><a href="/vblog/pages/41d8c1/" class="sidebar-link">test</a></li><li><a href="/vblog/pages/a280f8/" class="sidebar-link">24-文件上传和下载</a></li><li><a href="/vblog/pages/dfafdf/" class="sidebar-link">29-微信小程序登录</a></li><li><a href="/vblog/pages/e526c3/" class="sidebar-link">22-文件云存储</a></li><li><a href="/vblog/pages/3c34c0/" class="sidebar-link">07-视图</a></li></ul></section></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/vblog/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/vblog/webappframework" title="后端-目录页" data-v-1cd794fe>后端</a></li> <li data-v-1cd794fe><a href="/vblog/webappframework/#django" title="后端#django" data-v-1cd794fe>django</a></li> <!----></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/zzzpandaQian" target="_blank" title="作者" class="beLink" data-v-1cd794fe>zzzpandaQian</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2019-11-07</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          21-项目部署
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h1 id="项目部署"><a href="#项目部署" class="header-anchor">#</a> 项目部署</h1> <h2 id="一、项目部署"><a href="#一、项目部署" class="header-anchor">#</a> 一、项目部署</h2> <p>####1、概述</p> <p>​	项目部署就是将开发完成的Django项目部署到指定的服务器上，而服务器的系统基本都是linux。</p> <p>​	Django项目当前最主要的部署方式是：Python+Django+Nginx+uWSGI</p> <ul><li>python：是python程序运行的环境</li> <li>Django：是项目开发的主要框架，也特指我们开发的django项目</li> <li>Nginx：反向代理服务器，用于实现对用户请求的转发，转发给uWSGI，主要实现3个功能：
+<ul><li>反向代理</li> <li>动静分离</li> <li>负载均衡</li></ul></li> <li>uWSGI：python的web服务器，使用WSGI协议和django项目交互，使用uwsgi协议和nginx进行通信</li></ul> <h4 id="_2、环境介绍"><a href="#_2、环境介绍" class="header-anchor">#</a> 2、环境介绍</h4> <p>​	本文中使用的环境为：</p> <ul><li>centos7</li> <li>python3.6.5</li> <li>django2.2</li> <li>nginx1.14.0</li> <li>uWSGI2.0.18</li></ul> <h4 id="_3、安装python"><a href="#_3、安装python" class="header-anchor">#</a> 3、安装python</h4> <p>1、 如果没有安装wget，使用以下命令安装：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum -y install wget
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2、 访问 <a href="https://www.python.org/ftp/python/" target="_blank" rel="noopener noreferrer">https://www.python.org/ftp/python/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 查找需要下载的python版本，譬如：Python-3.6.5.tgz</p> <p>或者使用window下载后传送到centos中，或者直接使用以下命令下载</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​       PS：没有设置下载目录的话，文件会下载在当前目录</p> <p>3、 安装编译器gcc：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install gcc
+
+yum install gcc-c++
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>4、 执行解压：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar -zxvf Python-3.6.5.tgz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>5、 移动文件夹到指定目录/usr/local/：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mv Python-3.6.5 /usr/local/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>6、 进入到指定目录：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd /usr/local/Python-3.6.5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>7、 修改Setup：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi Modules/Setup.dist
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>修改结果如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## Socket module helper for socket(2)  
+_socket socketmodule.c timemodule.c  
+  
+## Socket module helper for SSL support; you must comment out the other  
+## socket line above, and possibly edit the SSL variable:  
+##SSL=/usr/local/ssl  
+_ssl _ssl.c \  
+-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \  
+-L$(SSL)/lib -lssl -lcrypto  
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>说明：</p> <p>最下面的3行，本来是被注释的，需要将注释去掉</p> <p>8、 安装zlib依赖包：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install zlib*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>9、 安装sqlite3：</p> <p>直接使用以下命令安装，会安装 sqlite-devel-3.7.17-8.el7.x86_64 版本</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install sqlite-devel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>而我们django2.2的版本需要 sqlite3.8.3 或以上版本，因此需要手动安装sqlite3</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## wget 命令安装
+## 也可以在windows中下载之后发送到linux中
+wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gz
+
+tar -zxvf sqlite-autoconf-3270200.tar.gz
+
+cd sqlite-autoconf-3270200
+
+## 执行配置
+./configure --prefix=/usr/local
+
+## 编译并且安装， 可能会比较耗时
+make &amp;&amp; make install
+
+## 查看安装结果
+find /usr/ -name sqlite3
+
+## 查看安装版本
+/usr/local/bin/sqlite3 --version
+
+## 删除安装包
+cd ..
+rm sqlite-autoconf-3270200.tar.gz
+rm sqlite-autoconf-3270200
+
+## 现有版本
+/usr/bin/sqlite3 --version
+
+## 移除现有链接
+mv /usr/bin/sqlite3  /usr/bin/sqlite3_old
+
+## 添加新的版本的链接
+ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3
+
+## 将路径传递给共享库, 如果想开机自动运行，则将下面的代码写入到 ~/.bashrc 文件中，文件配置立即生效使用：source ~/.bashrc
+export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p>10、安装ssl：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install openssl -y
+yum install openssl-devel -y
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>11、执行配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure --prefix=/usr/local/python36 --with-ssl CFLAGS=-fPIC
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>12、执行编译：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>make
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>PS：会比较耗时</p> <p>13、执行编译安装：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>make install
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>PS：会比较耗时</p> <p>14、创建链接：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ln -s /usr/local/python36/bin/python3.6 /usr/bin/python3
+
+ln -s /usr/local/python36/bin/pip3.6 /usr/bin/pip3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>PS：记住 ln 中的 l 是 L 的小写，不是 i 的大写</p> <p>centos中默认安装有python2.7，在系统中链接为 python2和python</p> <p>我们可以删除现有python2链接：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>rm -rf /usr/bin/python
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后创建python3.6.5的链接为python</p> <p>但是不推荐，因为很多命令都会依赖python，一旦修改为python3了，会有各种的错误产生</p> <p>15、查看安装结果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pip3 -V
+
+python3 -V
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="_4、django程序处理"><a href="#_4、django程序处理" class="header-anchor">#</a> 4、Django程序处理</h4> <p>​	假设我们的django项目已经开发完毕</p> <h6 id="_1、通用配置修改"><a href="#_1、通用配置修改" class="header-anchor">#</a> 1、通用配置修改</h6> <p>settings.py：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>DEBUG <span class="token operator">=</span> <span class="token boolean">False</span>
+
+ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'*'</span><span class="token punctuation">]</span>
+
+DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'blog'</span><span class="token punctuation">,</span>
+        <span class="token string">'USER'</span><span class="token punctuation">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+        <span class="token string">'PASSWORD'</span><span class="token punctuation">:</span> <span class="token string">'nihaoma0'</span><span class="token punctuation">,</span>
+        <span class="token string">'HOST'</span><span class="token punctuation">:</span> <span class="token string">'192.168.107.107'</span><span class="token punctuation">,</span>
+        <span class="token string">'PORT'</span><span class="token punctuation">:</span> <span class="token string">'3306'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>说明：</p> <ul><li>修改DEBUG为False，同时必须配置 ALLOWED_HOSTS ，内容是允许访问的域名列表，使用 * 表示通配符</li> <li>修改数据库连接为 生产环境 下使用的</li></ul> <h6 id="_2、静态文件处理"><a href="#_2、静态文件处理" class="header-anchor">#</a> 2、静态文件处理</h6> <p>settings.py：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">## url中访问静态文件的url起始path</span>
+STATIC_URL <span class="token operator">=</span> <span class="token string">'/static/'</span>
+
+<span class="token comment">## 合并后的静态文件目录的绝对路径，需要在根目录添加 static 目录</span>
+STATIC_ROOT <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'static'</span><span class="token punctuation">)</span>
+
+<span class="token comment">## 以下不是必须的， 扩展的静态文件地址，需要添加 common_static 目录</span>
+STATICFILES_DIRS <span class="token operator">=</span> <span class="token punctuation">(</span>
+    os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">'common_static'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>说明：</p> <ul><li>主要需要添加 STATIC_ROOT 配置，用于部署后，合并各个子应用下的静态文件</li> <li>部署后，别忘记使用 <code>python manage.py collectstatic</code>命令，合并各个子应用下的静态文件，然后在 处理静态文件的服务器中（如nginx）配置到该路径</li></ul> <h6 id="_3、python环境处理"><a href="#_3、python环境处理" class="header-anchor">#</a> 3、python环境处理</h6> <p>在django项目的根目录，生成一个 requirements.txt</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 如果使用的第三方库比较少，那么可以手写一个 requirements.txt
+## 如果使用的第三方库较多，那么就使用以下命令：
+pip freeze &gt; requirements.txt
+
+## 拷贝上述的文件到服务器中，并且执行以下命令安装环境
+pip3 install -r requirements.txt
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h6 id="_4、复制项目文件到服务器"><a href="#_4、复制项目文件到服务器" class="header-anchor">#</a> 4、复制项目文件到服务器</h6> <p>将项目拷贝linux系统中（譬如FTP），然后移动到 /var/www/ 目录下</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mv /ftp/childrenshop /var/www/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>PS：拷贝完成后，记得执行合并static的命令<code>python manage.py collectstatic</code></p> <h4 id="_5、安装和使用uwsgi"><a href="#_5、安装和使用uwsgi" class="header-anchor">#</a> 5、安装和使用uWSGI</h4> <p>1、 uwsgi官方文档：http://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html</p> <p>2、 在生产环境中，使用虚拟环境，一般我们的linux中，会有2套 python，一个是系统自带的python2，一个是我们的项目环境所需的python3</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>##使用以下命令查看
+python2 -V
+python3 -V 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>3、 在环境中安装项目所需第三方库，假定当前djang项目（项目名：childrenshop）已经拷贝到 /var/www 目录下，并且目录中已经有  requirements.txt 文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 切换到 项目路径
+cd /var/www/children
+
+## 安装环境
+pip3 install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>4、 使用 pip 安装uwsgi</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pip3 install uwsgi==2.0.18 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>说明：</p> <ul><li>-i ： 指定镜像源的网址，这里使用的豆瓣</li> <li>--trusted-host ： 信任 -i 指定的网站，不进行信任的话，会出现SSL错误</li></ul> <p>5、 测试uwsgi</p> <p>编写一个测试的py文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi test.py
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>​       文件内容如下：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">##!/usr/bin/env python3</span>
+<span class="token comment">## coding:utf-8</span>
+
+<span class="token keyword">import</span> sys
+
+<span class="token keyword">def</span> <span class="token function">application</span><span class="token punctuation">(</span>env<span class="token punctuation">,</span>start_response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    start_response<span class="token punctuation">(</span><span class="token string">'200 OK'</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'Content-Type'</span><span class="token punctuation">,</span><span class="token string">'text/html'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">'Welcome to use uwsgi!!!'</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>​       运行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/python36/bin/uwsgi --http 0.0.0.0:8997 --wsgi-f /var/www/childrenshop/	test.py
+这里的路径应修改为实际情况
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>注意：</p> <p>由于我们需要从本机访问linux的8997端口，因此需要设置linux的防火墙：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>centos 》 7.0
+## 开放8997端口
+firewall-cmd --zone=public --add-port=8997/tcp --permanent
+
+## 删除端口
+firewall-cmd --zone=public --remove-port=8997/tcp
+
+## 重启防火墙
+firewall-cmd --reload
+
+## 查看防火墙状态
+firewall-cmd --list-all
+
+centos &lt; 7.0
+vi /etc/sysconfig/iptables
+添加语句
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+其中8080就是新增端口号
+
+## 重启防火墙
+service iptables restart
+
+## 关闭、开启防火墙
+service iptables stop/start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>​</p> <p>在浏览器中，访问： http://192.168.134.101:8997    ，注意修改对应的ip地址</p> <p>​       即可查看到类似如下页面中显示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Welcome to use uwsgi!!!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>9、 使用 uwsgi 启动django：</p> <p>使用 ini格式配置文件，文件名 uwsgi.ini ：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi uwsgi.ini
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>文件内容：</p> <div class="language-ini line-numbers-mode"><pre class="language-ini"><code><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">uwsgi</span><span class="token punctuation">]</span></span>
+<span class="token comment">## 虚拟主机模式</span>
+<span class="token key attr-name">vhost</span> <span class="token punctuation">=</span> <span class="token value attr-value">false</span>  
+<span class="token comment">## ip端口如果存在nginx应该为socket，否则为http不能占用nginx的端口否则会出错</span>
+<span class="token key attr-name">socket</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0:8000</span>	
+
+<span class="token comment">## 是否主服务器</span>
+<span class="token key attr-name">master</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span>
+<span class="token comment">## 是否多线程</span>
+<span class="token key attr-name">enable-threads</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span>
+<span class="token comment">## 工作进程数</span>
+<span class="token key attr-name">workers</span> <span class="token punctuation">=</span> <span class="token value attr-value">5</span>
+<span class="token comment">## wsgi.py文件的位置而非uwsgi启动程序文件</span>
+<span class="token key attr-name">wsgi-file</span> <span class="token punctuation">=</span> <span class="token value attr-value">/usr/var/my_env/blog/blog/wsgi.py</span>
+<span class="token comment">## 项目的根目录</span>
+<span class="token key attr-name">chdir</span> <span class="token punctuation">=</span> <span class="token value attr-value">/usr/var/my_env/blog/</span>
+
+<span class="token comment">## 设置 pid 记录文件</span>
+<span class="token key attr-name">pidfile</span> <span class="token punctuation">=</span> <span class="token value attr-value">/usr/var/my_env/blog/uwsgi.pid</span>
+<span class="token comment">## 后台运行uwsgi, 如果想实时查看日志内容，可以使用 tail -f uwsgi.log</span>
+<span class="token key attr-name">daemonize</span> <span class="token punctuation">=</span> <span class="token value attr-value">/usr/var/my_env/blog/uwsgilogs/uwsgi.log</span>
+
+<span class="token comment">## 由于python版本而出现的no python application错误时写入</span>
+<span class="token comment">## pythonpath = /usr/var/my_env/blog/lib/python3.6/site-packages</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>说明：</p> <ul><li><p>daemonize 指定 log 输出， 需要创建对应的 目录</p></li> <li><p>如果是想要通过浏览器访问的话，需要将配置中的 socket =  修改为 http = ，否则会报以下错误：</p></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>invalid request block size: 21573 (max 4096)...skip  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>同时需要在防火墙中开放 8997 端口，如果上面已经开放过了，就不需要再额外处理</p> <p>若出现以下错误：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>no python application found, check your startup logs for errors
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><p>wsgi-file文件填写错误</p></li> <li><p>python编译器版本错误（本应3.*却调用了2.*版本）</p></li> <li><p>wsgi.py文件需要注册虚拟环境的site-packages</p> <p>wsgi.py文件代码应如下所示：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment">## wsgi.py file begin </span>
+<span class="token keyword">import</span> os<span class="token punctuation">,</span> sys
+<span class="token comment">## add the hellodjango project path into the sys.path</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'&lt;PATH_TO_MY_DJANGO_PROJECT&gt;/hellodjango'</span><span class="token punctuation">)</span>  <span class="token comment">## 添加你的项目绝对路径</span>
+<span class="token comment">## sys.path.append('...../my_env/blog')填入项目根目录的绝对路径</span>
+
+
+<span class="token comment">## add the virtualenv site-packages path to the sys.path</span>
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'&lt;PATH_TO_VIRTUALENV&gt;/Lib/site-packages'</span><span class="token punctuation">)</span>  <span class="token comment">## 添加你虚拟环境包绝对路径</span>
+<span class="token comment">## sys.path.append('...../my_env/blog/lib/python3.*/site-packages')填入项目lib下的python3.*的site-packages路径</span>
+
+
+<span class="token comment">## poiting to the project settings</span>
+os<span class="token punctuation">.</span>environ<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">&quot;DJANGO_SETTINGS_MODULE&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;hellodjango.settings&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>core<span class="token punctuation">.</span>wsgi <span class="token keyword">import</span> get_wsgi_application
+
+application <span class="token operator">=</span> get_wsgi_application<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">## wsgi.py file end</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li></ul> <p>启动 uwsgi：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/python36/bin/uwsgi --ini /var/www/childrenshop/uwsgi.ini
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>也可以先创建链接，再运行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ln /usr/local/python36/bin/uwsgi /usr/bin/uwsgi
+
+uwsgi --ini /var/www/childrenshop/uwsgi.ini
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>如果不以后台模式启动，会得到如下界面：</p> <p>备注：</p> <p>如果需要使用 killall 命令关闭所有的uwsgi进程的话，需要安装库：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install -y psmisc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>安装完毕后，可以使用以下命令关闭 uwsgi 进程</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>killall -9 uwsgi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>tail -f uwsgi.ini ##可以监听uwsgi进程
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>10、设置启动脚本，service方式（7.0版本）</p> <p>在/etc/init.d/  目录下建立3个脚本：</p> <p>uwsgi-start.sh</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>##!/bin/bash -e
+
+export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;
+
+/usr/local/python36/bin/uwsgi --ini /var/www/childrenshop/uwsgi.ini
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>说明： export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;   这一行是为了防止 出现 sqlite 版本错误</p> <p>uwsgi-stop.sh</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>##!/bin/bash -e
+
+/usr/local/python36/bin/uwsgi --stop /var/run/uwsgi.pid
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>说明：/var/run/uwsgi.pid 是在 uwsgi.ini 中配置的</p> <p>uwsgi-restart.sh</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>##!/bin/bash -e
+
+/usr/local/python36/bin/uwsgi --reload /var/run/uwsgi.pid
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>脚本赋予权限：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod 755 uwsgi-start.sh
+chmod 755 uwsgi-stop.sh
+chmod 755 uwsgi-restart.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>编写service脚本：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi /usr/lib/systemd/system/uwsgi.service
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>填入以下内容：</p> <div class="language-ini line-numbers-mode"><pre class="language-ini"><code><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">Unit</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">Description</span><span class="token punctuation">=</span><span class="token value attr-value">uwsgi</span>
+<span class="token key attr-name">After</span><span class="token punctuation">=</span><span class="token value attr-value">network.target</span>
+   
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">Service</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">Type</span><span class="token punctuation">=</span><span class="token value attr-value">forking</span>
+<span class="token key attr-name">PIDFile</span><span class="token punctuation">=</span><span class="token value attr-value">/var/run/uwsgi.pid</span>
+<span class="token key attr-name">ExecStart</span><span class="token punctuation">=</span><span class="token value attr-value">/etc/init.d/uwsgi-start.sh</span>
+<span class="token key attr-name">ExecReload</span><span class="token punctuation">=</span><span class="token value attr-value">/etc/init.d/uwsgi-restart.sh</span>
+<span class="token key attr-name">ExecStop</span><span class="token punctuation">=</span><span class="token value attr-value">/etc/init.d/uwsgi-stop.sh</span>
+<span class="token key attr-name">PrivateTmp</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+   
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">Install</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">WantedBy</span><span class="token punctuation">=</span><span class="token value attr-value">multi-user.target</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>说明：</p> <ul><li><p>以上出现的路径必须是绝对路径</p></li> <li><p>ExecStart、ExecReload、ExecStop 3个分别对应 启动、重新启动、停止</p></li> <li><p>PIDFile 对应启动后的 pid 保存文件</p></li></ul> <p>设置自启动</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>systemctl enable uwsgi.service
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>说明： .service  可以省略</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 启动
+systemctl start uwsgi
+
+## 停止
+systemctl stop uwsgi
+
+## 重启
+systemctl restart uwsgi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>10.1 systemctl是centos7.0版本代替centos6.*版本的service 和 chkconfig的</p> <p>通过service 和 chkconfig设置自启动和系统脚本</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">## 直接执行脚本</span>
+/etc/init.d/netword restart
+<span class="token comment">## 通过 service 命令执行脚本</span>
+<span class="token function">service</span> network restart
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>service 等同于netword</p> <p>在/etc/init.d/下创建自定义脚本文件：my-uwsgi</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi /etc/init.d/my-uwsgi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>在my-uwsgi写入</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>##!/bin/bash
+##chkconfig:35 85 15
+DAEMON=/usr/local/python3/bin/uwsgi
+case &quot;$1&quot; in
+start)
+  echo &quot;Starting uwsgi daemon...&quot;
+  export LD_LIBRARY_PATH=&quot;/usr/lib&quot;
+  $DAEMON --ini /usr/var/my_env/releaseVol1/uwsgi.ini &amp;&amp; echo &quot;SUCCESS&quot;
+  ;;  
+stop)
+  echo &quot;Stopping uwsgi deamon...&quot;
+  $DAEMON --stop /usr/var/my_env/releaseVol1/uwsgi.pid &amp;&amp; echo &quot;SUCCESS&quot;
+  ;;  
+restart)
+  echo &quot;Restarting uwsgi deamon&quot;
+  $DAEMON --reload /usr/var/my_env/releaseVol1/uwsgi.pid &amp;&amp; echo &quot;SUCCESS&quot;
+  ;;  
+*)
+  echo &quot;Usage:service nginx{start|stop|reload|restart}&quot;
+  exit 2
+  ;;  
+esac
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>其中uwsgi.pid和uwsgi.ini都是绝对路径， ##chkconfig:35 85 15设定了开机自启动配置</p> <p>也可以通过指令chkconfig操作</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 添加自启动指令
+chkconfig --add my-uwsgi
+## 删除自启动指令
+chkconfig --del my-uwsgi
+## 查看开机自启动列表
+chkconfig --list
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>最后给my-uwsgi添加权限</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>chmod 755 my-uwsgi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_6、安装和使用nginx"><a href="#_6、安装和使用nginx" class="header-anchor">#</a> 6、安装和使用nginx</h4> <h6 id="_1-配置说明"><a href="#_1-配置说明" class="header-anchor">#</a> 1.配置说明</h6> <p>​	Nginx服务器的配置信息主要集中在&quot;nginx.conf&quot;这个配置文件中（默认为/usr/local/nginx/conf/nginx.conf），所有的可配置项主要为以下几点：</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">main</span>                                <span class="token comment">## 全局配置</span>
+
+events</span> <span class="token punctuation">{</span>                            <span class="token comment">## 工作模式配置</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token directive"><span class="token keyword">http</span></span> <span class="token punctuation">{</span>                              <span class="token comment">## http设置</span>
+    ....
+
+    <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>                        <span class="token comment">## 服务器主机配置（虚拟主机、反向代理等）</span>
+        ....
+        <span class="token directive"><span class="token keyword">location</span> \ </span><span class="token punctuation">{</span>                  <span class="token comment">## 路由配置（虚拟目录等）</span>
+            ....
+        <span class="token punctuation">}</span>
+
+        <span class="token directive"><span class="token keyword">location</span> path</span> <span class="token punctuation">{</span>
+            ....
+        <span class="token punctuation">}</span>
+
+        <span class="token directive"><span class="token keyword">location</span> otherpath</span> <span class="token punctuation">{</span>
+            ....
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>
+        ....
+
+        <span class="token directive"><span class="token keyword">location</span></span> <span class="token punctuation">{</span>
+            ....
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token directive"><span class="token keyword">upstream</span> name</span> <span class="token punctuation">{</span>                  <span class="token comment">## 负载均衡配置</span>
+        ....
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><p>各模块中主要的配置为：</p> <p>######## 1.main模块</p> <ul><li>user：用来指定nginx worker进程运行用户以及用户组，默认nobody账号运行</li> <li>worker_processes：指定nginx要开启的子进程数量，运行过程中监控每个进程消耗内存(一般几M~几十M不等)根据实际情况进行调整，通常数量是CPU内核数量的整数倍</li> <li>error_log：定义错误日志文件的位置及输出级别【debug / info / notice / warn / error / crit】</li> <li>pid：用来指定进程id的存储文件的位置</li> <li>worker_rlimit_nofile：用于指定一个进程可以打开最多文件数量的描述</li></ul> <p>######## 2.event模块</p> <ul><li><p>worker_connections：指定最大可以同时接收的连接数量，这里一定要注意，最大连接数量是和worker_processes共同决定的，理论上是worker_processes*worker_connections</p></li> <li><p>multi_accept：配置指定nginx在收到一个新连接通知后尽可能多的接受更多的连接</p></li> <li><p>use epoll：配置指定了线程轮询的方法，如果是linux2.6+，使用epoll，如果是BSD如Mac请使用Kqueue</p></li></ul> <p>######## 3.http模块</p> <p>作为web服务器，http模块是nginx最核心的一个模块，配置项也是比较多的，项目中会设置到很多的实际业务场景，需要根据硬件信息进行适当的配置。</p> <p>########## 1.基础配置</p> <ul><li>sendfile on：配置on让sendfile发挥作用，将文件的回写过程交给数据缓冲去完成，而不是放在应用中完成，这样的话在性能提升有有好处</li> <li>tcp_nopush on：让nginx在一个数据包中发送所有的头文件，而不是一个一个单独发</li> <li>tcp_nodelay on：让nginx不要缓存数据，而是一段一段发送，如果数据的传输有实时性的要求的话可以配置它，发送完一小段数据就立刻能得到返回值，但是不要滥用哦</li> <li>keepalive_timeout 10：给客户端分配连接超时时间，服务器会在这个时间过后关闭连接。一般设置时间较短，可以让nginx工作持续性更好</li> <li>client_header_timeout 10：设置请求头的超时时间</li> <li>client_body_timeout 10:设置请求体的超时时间</li> <li>send_timeout 10：指定客户端响应超时时间，如果客户端两次操作间隔超过这个时间，服务器就会关闭这个连接</li> <li>limit_conn_zone $binary_remote_addr zone=addr:5m ：设置用于保存各种key的共享内存的参数，</li> <li>limit_conn addr 100: 给定的key设置最大连接数</li> <li>server_tokens：虽然不会让nginx执行速度更快，但是可以在错误页面关闭nginx版本提示，对于网站安全性的提升有好处哦</li> <li>include /etc/nginx/mime.types：指定在当前文件中包含另一个文件的指令</li> <li>default_type application/octet-stream：指定默认处理的文件类型可以是二进制</li> <li>type_hash_max_size 2048：混淆数据，影响三列冲突率，值越大消耗内存越多，散列key冲突率会降低，检索速度更快；值越小key，占用内存较少，冲突率越高，检索速度变慢</li></ul> <p>########## 2.日志配置</p> <ul><li><p>access_log logs/access.log：设置存储访问记录的日志</p></li> <li><p>error_log logs/error.log：设置存储记录错误发生的日志</p></li></ul> <p>########## 3.SSL证书配置</p> <ul><li><p>ssl_protocols：指令用于启动特定的加密协议，nginx在1.1.13和1.0.12版本后默认是ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2，TLSv1.1与TLSv1.2要确保OpenSSL &gt;= 1.0.1 ，SSLv3 现在还有很多地方在用但有不少被攻击的漏洞。</p></li> <li><p>ssl prefer server ciphers：设置协商加密算法时，优先使用我们服务端的加密套件，而不是客户端浏览器的加密套件</p></li></ul> <p>########## 4.压缩配置</p> <ul><li>gzip 是告诉nginx采用gzip压缩的形式发送数据。这将会减少我们发送的数据量。</li> <li>gzip_disable 为指定的客户端禁用gzip功能。我们设置成IE6或者更低版本以使我们的方案能够广泛兼容。</li> <li>gzip_static 告诉nginx在压缩资源之前，先查找是否有预先gzip处理过的资源。这要求你预先压缩你的文件，从而允许你使用最高压缩比，这样nginx就不用再压缩这些文件了</li> <li>gzip_proxied 允许或者禁止压缩基于请求和响应的响应流。我们设置为any，意味着将会压缩所有的请求。</li> <li>gzip_min_length 设置对数据启用压缩的最少字节数。如果一个请求小于1000字节，我们最好不要压缩它，因为压缩这些小的数据会降低处理此请求的所有进程的速度。</li> <li>gzip_comp_level 设置数据的压缩等级。这个等级可以是1-9之间的任意数值，9是最慢但是压缩比最大的。我们设置为4，这是一个比较折中的设置。</li> <li>gzip_type 设置需要压缩的数据格式</li></ul> <p>########## 5.文件缓存配置</p> <ul><li>open_file_cache 打开缓存的同时也指定了缓存最大数目，以及缓存的时间。我们可以设置一个相对高的最大时间，这样我们可以在它们不活动超过20秒后清除掉。</li> <li>open_file_cache_valid 在open_file_cache中指定检测正确信息的间隔时间。</li> <li>open_file_cache_min_uses 定义了open_file_cache中指令参数不活动时间期间里最小的文件数。</li> <li>open_file_cache_errors 指定了当搜索一个文件时是否缓存错误信息，也包括再次给配置中添加文件。我们也包括了服务器模块，这些是在不同文件中定义的。如果你的服务器模块不在这些位置，你就得修改这一行来指定正确的位置。</li></ul> <p>########## 6.server模块</p> <p>​	server模块配置是http模块中的一个子模块，用来定义一个虚拟访问主机，也就是一个虚拟服务器的配置信息。</p> <p>​	类似：</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">http</span></span> <span class="token punctuation">{</span>
+    <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>
+        <span class="token directive"><span class="token keyword">listen</span>         <span class="token number">80</span></span><span class="token punctuation">;</span>
+        <span class="token directive"><span class="token keyword">server_name</span>    localhost 192.168.134.130</span><span class="token punctuation">;</span>
+        <span class="token directive"><span class="token keyword">charset</span>        utf-8</span><span class="token punctuation">;</span>
+        <span class="token directive"><span class="token keyword">access_log</span>     logs/access.log</span><span class="token punctuation">;</span>
+        <span class="token directive"><span class="token keyword">error_log</span>      logs/error.log</span><span class="token punctuation">;</span>
+        ......
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>说明：</p> <ul><li>server：一个虚拟主机的配置，一个http中可以配置多个server</li> <li>server_name：用来指定ip地址或者域名，多个配置之间用空格分隔</li> <li>charset：用于设置www/路径中配置的网页的默认编码格式</li> <li>access_log：用于指定该虚拟主机服务器中的访问记录日志存放路径</li> <li>error_log：用于指定该虚拟主机服务器中访问错误日志的存放路径</li></ul> <p>########## 7.location模块</p> <p>​	location模块是Nginx配置中出现最多的一个配置，主要用于配置路由访问信息，属于http下的server下的子模块。</p> <p>​	在路由访问信息配置中关联到反向代理、负载均衡等等各项功能，所以location模块也是一个非常重要的配置模块。</p> <ol><li>基本配置</li></ol> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">http</span></span> <span class="token punctuation">{</span>
+    <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>
+        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span>
+            <span class="token directive"><span class="token keyword">root</span>    /nginx/www</span><span class="token punctuation">;</span>
+            <span class="token directive"><span class="token keyword">index</span>    index.php index.html index.htm</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>说明：</p> <ul><li><p>location /：表示匹配访问根目录</p></li> <li><p>root：用于指定访问根目录时，访问虚拟主机的web目录</p></li> <li><p>index：在不指定访问具体资源时，默认展示的资源文件列表</p></li></ul> <ol start="2"><li>反向代理配置</li></ol> <p>通过反向代理代理服务器访问模式，通过代理配置让客户端访问透明化。</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span>
+    <span class="token directive"><span class="token keyword">proxy_pass</span> http://localhost:8888</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">proxy_set_header</span> <span class="token string">'X-real-ip <span class="token variable">$remote_addr</span>'</span></span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">proxy_set_header</span> Host <span class="token variable">$http_host</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>说明：</p> <ul><li><p>location / :  其中的 / 指明是url根路径</p></li> <li><p>proxy_pass：代理的目标，ip和端口</p></li> <li><p>proxy_set_header：代理后，添加的header</p></li></ul> <ol start="3"><li>uWSGI配置</li></ol> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span>
+    <span class="token directive"><span class="token keyword">include</span> uwsgi_params</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">uwsgi_pass</span> localhost:8888</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>说明：</p> <ul><li>include： 指定uwsgi的配置参数</li> <li>uwsgi_pass：uWSGI服务器的IP和端口</li></ul> <ol start="4"><li>静态文件</li></ol> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">location</span> /static/</span> <span class="token punctuation">{</span>
+	<span class="token directive"><span class="token keyword">alias</span> /var/www/test_project/static/</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>说明：</p> <ul><li>/static/： url的起始path</li> <li>alias： 指定服务器的静态文件目录</li></ul> <p>########## 8.负载均衡模块（upstream）</p> <p>upstream模块主要负责负载均衡的配置，通过默认的轮询调度方式来分发请求到后端服务器。简单的配置方式如下。</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">upstream</span> name</span> <span class="token punctuation">{</span>
+    <span class="token comment">##ip_hash;</span>
+    <span class="token directive"><span class="token keyword">server</span> 192.168.1.101:8000 weight=9</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">server</span> 192.168.1.102:8001 down</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">server</span> 192.168.1.103:8002 max_fails=3</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">server</span> 192.168.1.104:8003 fail_timeout=20s</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">server</span> 192.168.1.105:8004 max_fails=3 fail_timeout=20s</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>说明：</p> <ul><li><p>ip_hash：指定请求调度算法，默认是weight权重轮询调度，可以指定</p> <ul><li><p>默认没有配置时，采取轮询，配合weight，譬如配置如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>upstream name {
+    server 192.168.1.101:8000;
+    server 192.168.1.102:8001 weight=2;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>那么用户发送请求时，会执行执行这样的逻辑： 8000端口一次， 8001端口两次。。。循环</p></li> <li><p>ip_hash：根据客户端ip的hash值决定服务器，这样每个ip的客户端固定访问一个服务器</p></li> <li><p>least_conn：请求将被分配到活动连接数量最少的服务器</p></li> <li><p>fair：按后端服务器的响应时间来请求分配，响应时间短的优先分配</p></li> <li><p>url_hash：按访问url的hash结果来分配请求，按每个url定向到同一个后端服务器，后端服务器为缓存时比较有效</p></li></ul></li> <li><p>server host:port：分发服务器的列表配置</p></li> <li><p>down：表示该主机暂停服务</p></li> <li><p>max_fails：表示失败最大次数，超过失败最大次数暂停服务</p></li> <li><p>fail_timeout：表示如果请求受理失败，暂停指定的时间之后重新发起请求</p></li></ul> <h6 id="_2-安装"><a href="#_2-安装" class="header-anchor">#</a> 2.安装</h6> <p>1、 gcc 安装</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install gcc-c++
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2、 PCRE pcre-devel 安装</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install -y pcre pcre-devel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>3、 zlib 安装</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install -y zlib zlib-devel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>4、 openssl 安装</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install -y openssl openssl-devel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>5、 安装nginx， 官网地址：<a href="https://nginx.org/en/download.html" target="_blank" rel="noopener noreferrer">https://nginx.org/en/download.html<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>可以手动去官网下载对应的版本，然后拷贝到linux系统中</p> <p>也可以使用 wget 下载</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>wget -c https://nginx.org/download/nginx-1.14.0.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>6、 下载完成后，进行解压：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar -zxvf nginx-1.14.0.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>7、 进入解压后的目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd nginx-1.14.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>8、 应用默认配置，执行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 默认安装
+./configure
+
+## 指定一些特定参数的安装
+./configure --with-http_ssl_module --prefix=&quot;/install/program/nginx&quot; --with-http_stub_status_module
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>9、 执行编译：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>make
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>10、执行安装：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>make install
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>11、查看安装路径：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>whereis nginx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>路径默认在： /usr/local/nginx</p> <p>12、常用命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 首先进行nginx安装目录下的 sbin 目录
+cd /usr/local/nginx/sbin
+
+## 启动nginx
+./nginx
+
+## 停止nginx：
+## 此方式停止步骤是待nginx进程处理任务完毕进行停止，推荐这个
+./nginx -s quit
+
+## 此方式相当于先查出nginx进程id再使用kill命令强制杀掉进程
+./nginx -s stop
+
+## 查看nginx进程
+ps aux|grep nginx
+
+## 验证配置文件：
+./nginx -t
+
+## 修改了nginx的配置文件，如果需要重新加载配置文件，使用：
+./nginx -s reload
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>13、启动nginx后，可以查看端口监听情况</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>netstat -tlnp
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>14、关闭linux防火墙或者开放nginx的端口，在浏览器中访问，即可查看到对应的欢迎页面</p> <p>15、设置nginx为开机启动</p> <ul><li>简单方式：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>## 编辑文件：
+vi /etc/rc.local
+
+## 增加一行 
+/usr/local/nginx/sbin/nginx
+
+## 设置权限
+chmod 755 /etc/rc.local
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>service方式：</li></ul> <p>编写service脚本：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi /usr/lib/systemd/system/nginx.service
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>填入以下内容：</p> <div class="language-ini line-numbers-mode"><pre class="language-ini"><code><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">Unit</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">Description</span><span class="token punctuation">=</span><span class="token value attr-value">nginx</span>
+<span class="token key attr-name">After</span><span class="token punctuation">=</span><span class="token value attr-value">network.target</span>
+   
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">Service</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">Type</span><span class="token punctuation">=</span><span class="token value attr-value">forking</span>
+<span class="token key attr-name">PIDFile</span><span class="token punctuation">=</span><span class="token value attr-value">/usr/local/nginx/logs/nginx.pid</span>
+<span class="token key attr-name">ExecStart</span><span class="token punctuation">=</span><span class="token value attr-value">/usr/local/nginx/sbin/nginx</span>
+<span class="token key attr-name">ExecReload</span><span class="token punctuation">=</span><span class="token value attr-value">/usr/local/nginx/sbin/nginx -s reload</span>
+<span class="token key attr-name">ExecStop</span><span class="token punctuation">=</span><span class="token value attr-value">/usr/local/nginx/sbin/nginx -s quit</span>
+<span class="token key attr-name">PrivateTmp</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+   
+<span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">Install</span><span class="token punctuation">]</span></span>
+<span class="token key attr-name">WantedBy</span><span class="token punctuation">=</span><span class="token value attr-value">multi-user.target</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>说明：</p> <ul><li>以上出现的路径必须是绝对路径</li> <li>ExecStart、ExecReload、ExecStop 3个分别对应 启动、重新启动、停止</li> <li>PIDFile 对应启动后的 pid 保存文件</li></ul> <p>设置自启动</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>systemctl enable nginx.service
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>说明： .service可以省略</p> <h6 id="_3-配置项目"><a href="#_3-配置项目" class="header-anchor">#</a> 3.配置项目</h6> <p>1、nginx配置</p> <p>配置文件位置：在 /usr/local/nginx/conf/nginx.conf</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token comment">###################### 每个指令必须有分号结束。##################################</span>
+<span class="token comment">## 配置用户或者组，默认为nobody nobody。</span>
+<span class="token comment">## user administrator administrators;  </span>
+<span class="token comment">##允许生成的进程数，默认为1</span>
+<span class="token comment">## worker_processes 2;  </span>
+<span class="token comment">## 指定nginx进程运行文件存放地址</span>
+<span class="token directive"><span class="token keyword">pid</span> /nginx/nginx.pid</span><span class="token punctuation">;</span>  
+<span class="token comment">##制定日志路径，级别。这个设置可以放入全局块，http块，server块，级别依次为：debug|info|notice|warn|error|crit</span>
+<span class="token directive"><span class="token keyword">error_log</span> logs/error.log debug</span><span class="token punctuation">;</span>  
+<span class="token directive"><span class="token keyword">events</span></span> <span class="token punctuation">{</span>
+	<span class="token comment">##设置网路连接序列化，防止惊群现象发生，默认为on</span>
+    <span class="token directive"><span class="token keyword">accept_mutex</span> <span class="token boolean">on</span></span><span class="token punctuation">;</span>   
+    <span class="token comment">##设置一个进程是否同时接受多个网络连接，默认为off</span>
+    <span class="token directive"><span class="token keyword">multi_accept</span> <span class="token boolean">on</span></span><span class="token punctuation">;</span> 
+    <span class="token comment">##事件驱动模型，select|poll|kqueue|epoll|resig|/dev/poll|eventport</span>
+    <span class="token comment">##use epoll;    </span>
+    <span class="token comment">##最大连接数，默认为 1024</span>
+    <span class="token directive"><span class="token keyword">worker_connections</span>  <span class="token number">1024</span></span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+<span class="token directive"><span class="token keyword">http</span></span> <span class="token punctuation">{</span>
+	<span class="token comment">##文件扩展名与文件类型映射表</span>
+    <span class="token directive"><span class="token keyword">include</span>       mime.types</span><span class="token punctuation">;</span>   
+    <span class="token comment">##默认文件类型，默认为text/plain</span>
+    <span class="token directive"><span class="token keyword">default_type</span>  application/octet-stream</span><span class="token punctuation">;</span> 
+    <span class="token comment">## 取消服务日志   </span>
+    <span class="token comment">##access_log off;  </span>
+    <span class="token comment">##自定义格式</span>
+    <span class="token directive"><span class="token keyword">log_format</span> myFormat <span class="token string">'<span class="token variable">$remote_addr–</span><span class="token variable">$remote_user</span> [<span class="token variable">$time_local]</span> <span class="token variable">$request</span> <span class="token variable">$status</span> <span class="token variable">$body_bytes_sent</span> <span class="token variable">$http_referer</span> <span class="token variable">$http_user_agent</span> <span class="token variable">$http_x_forwarded_for</span>'</span></span><span class="token punctuation">;</span> 
+    <span class="token comment">##combined为日志格式的默认值</span>
+    <span class="token directive"><span class="token keyword">access_log</span> logs/access.log myFormat</span><span class="token punctuation">;</span>  
+    <span class="token comment">##允许sendfile方式传输文件，默认为off，可以在http块，server块，location块。</span>
+    <span class="token directive"><span class="token keyword">sendfile</span> <span class="token boolean">on</span></span><span class="token punctuation">;</span>   
+    <span class="token comment">##每个进程每次调用传输数量不能大于设定的值，默认为0，即不设上限。</span>
+    <span class="token directive"><span class="token keyword">sendfile_max_chunk</span> <span class="token number">100k</span></span><span class="token punctuation">;</span>  
+    <span class="token comment">##连接超时时间，默认为75秒，可以在http，server，location块设置。</span>
+    <span class="token directive"><span class="token keyword">keepalive_timeout</span> <span class="token number">65</span></span><span class="token punctuation">;</span>  
+
+    <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>
+    	<span class="token comment">## 端口</span>
+        <span class="token directive"><span class="token keyword">listen</span>    <span class="token number">80</span></span><span class="token punctuation">;</span>
+        <span class="token comment">## 虚拟主机名，发布到互联网上写 域名，如:  *.test.com</span>
+        <span class="token directive"><span class="token keyword">server_name</span>  localhost</span><span class="token punctuation">;</span>    
+        <span class="token comment">## 默认编码</span>
+        <span class="token directive"><span class="token keyword">charset</span> utf-8</span><span class="token punctuation">;</span>   
+        <span class="token comment">## 路径</span>
+        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span>
+            	<span class="token comment">## 开启对http1.1支持</span>
+            	<span class="token directive"><span class="token keyword">proxy_http_version</span> 1.1</span><span class="token punctuation">;</span>
+                <span class="token comment">## 设置Connection为空串, 以禁止传递头部到后端</span>
+                <span class="token directive"><span class="token keyword">proxy_set_header</span> Connection <span class="token string">&quot;&quot;</span></span><span class="token punctuation">;</span>        
+        		<span class="token comment">## 包含 uwsgi配置，这个是相对路径，也可以使用绝对路径</span>
+                <span class="token directive"><span class="token keyword">include</span> uwsgi_params</span><span class="token punctuation">;</span>    
+                <span class="token comment">## uwsgi的端口</span>
+                <span class="token directive"><span class="token keyword">uwsgi_pass</span> 127.0.0.1:8998</span><span class="token punctuation">;</span>     
+                <span class="token comment">## 指定连接到后端uWSGI的超时时间。</span>
+                <span class="token directive"><span class="token keyword">uwsgi_send_timeout</span> <span class="token number">60</span></span><span class="token punctuation">;</span>  
+                <span class="token comment">## 指定向uWSGI传送请求的超时时间，完成握手后向uWSGI传送请求的超时时间。</span>
+                <span class="token directive"><span class="token keyword">uwsgi_connect_timeout</span> <span class="token number">60</span></span><span class="token punctuation">;</span>  
+                <span class="token comment">## 指定接收uWSGI应答的超时时间，完成握手后接收uWSGI应答的超时时间。</span>
+                <span class="token directive"><span class="token keyword">uwsgi_read_timeout</span> <span class="token number">60</span></span><span class="token punctuation">;</span>        
+        <span class="token punctuation">}</span>
+		
+		<span class="token comment">## 静态文件，和django项目中的settings中配置的 STATIC_URL = '/static/' 相对应</span>
+        <span class="token directive"><span class="token keyword">location</span> /static/</span> <span class="token punctuation">{</span>
+            	<span class="token comment">## 执行 collectstatic 合并静态文件之后的目录</span>
+                <span class="token directive"><span class="token keyword">alias</span> /usr/var/www/releaseVol1/static/</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">## 媒体文件，用户上传的文件</span>
+        <span class="token comment">##location /media/ {</span>
+        <span class="token comment">##        alias /var/www/childrenshop/media/;</span>
+        <span class="token comment">##}</span>
+
+        <span class="token comment">##error_page  404              /404.html;</span>
+
+        <span class="token comment">## 将服务器的错误页面重定向到静态页面 /50x.html</span>
+        <span class="token directive"><span class="token keyword">error_page</span>   <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span>  /50x.html</span><span class="token punctuation">;</span>
+        <span class="token directive"><span class="token keyword">location</span> = /50x.html</span> <span class="token punctuation">{</span>
+            <span class="token directive"><span class="token keyword">root</span>   html</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br></div></div><p>2、访问</p> <p>在防火墙中开放对应的端口，譬如：8996</p> <p>在浏览器中访问即可</p> <p>注意：别忘记将 uwsgi.ini 的配置中端口配置的 http = 修改为 socket =</p> <p>3、实现负载均衡</p> <p>在本文档中演示第二个uwsgi，复制一份新的配置文件，修改后，启动：</p> <p>uwsgi1.ini</p> <div class="language-ini line-numbers-mode"><pre class="language-ini"><code><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">uwsgi</span><span class="token punctuation">]</span></span>
+<span class="token comment">## 虚拟主机模式</span>
+<span class="token key attr-name">vhost</span> <span class="token punctuation">=</span> <span class="token value attr-value">false</span>
+<span class="token comment">## ip端口</span>
+<span class="token key attr-name">socket</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0:8998</span>
+<span class="token comment">## 是否主服务器</span>
+<span class="token key attr-name">master</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span>
+<span class="token comment">## 是否多线程</span>
+<span class="token key attr-name">enable-threads</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span>
+<span class="token comment">## 工作进程数</span>
+<span class="token key attr-name">workers</span> <span class="token punctuation">=</span> <span class="token value attr-value">5</span>
+<span class="token comment">## wsgi文件的位置</span>
+<span class="token key attr-name">wsgi-file</span> <span class="token punctuation">=</span> <span class="token value attr-value">/var/www/childrenshop/middleware_study/wsgi.py</span>
+<span class="token comment">## 项目的根目录</span>
+<span class="token key attr-name">chdir</span> <span class="token punctuation">=</span> <span class="token value attr-value">/var/www/childrenshop/</span>
+<span class="token comment">##limit-as = 256</span>
+<span class="token key attr-name">pidfile</span> <span class="token punctuation">=</span> <span class="token value attr-value">/var/run/uwsgi1.pid</span>
+<span class="token key attr-name">daemonize</span> <span class="token punctuation">=</span> <span class="token value attr-value">/var/www/childrenshop/logs/uwsgi1.log</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>启动 uwsgi1</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/python36/bin/uwsgi --ini /var/www/childrenshop/uwsgi1.ini
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>nginx.conf：</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token comment">## 和 server 平级配置，写在server上面</span>
+<span class="token directive"><span class="token keyword">upstream</span> mycom</span> <span class="token punctuation">{</span> 
+    <span class="token comment">## 采用默认轮询</span>
+    <span class="token comment">## ip_hash;</span>
+    <span class="token directive"><span class="token keyword">server</span> 127.0.0.1:8997</span><span class="token punctuation">;</span>
+    <span class="token directive"><span class="token keyword">server</span> 127.0.0.1:8998</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+
+<span class="token comment">## server下的 location 配置中，修改：</span>
+<span class="token directive"><span class="token keyword">uwsgi_pass</span> mycom</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>4、测试访问，同时监听2个uwsgi服务器日志输出，可以看到负载均衡的效果</p> <p>5.子路径</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> server {
+                listen 80;
+                server_name  testapp.com;
+                location / {
+                        root /usr/share/nginx/html/official_web/; 
+                        index  index.html index.htm;
+                        ## try_files $uri $uri/ /index.html;
+                }
+                ###### oms ######
+                location  /oms {
+                     alias /usr/share/nginx/html/oms;   ##注意就是这一行，根路径除了首个root其余都应该为alias
+                     index index.html index.htm;
+                     ## try_files $uri $uri/ /oms/index.html;
+                }
+                ## ......  ##
+        }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h6 id="_4-外网访问虚拟机"><a href="#_4-外网访问虚拟机" class="header-anchor">#</a> 4.外网访问虚拟机</h6> <p>需要修改nginx.conf</p> <p>将server_name  修改为域名;</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token directive"><span class="token keyword">http</span></span><span class="token punctuation">{</span>
+  <span class="token directive"><span class="token keyword">server</span></span><span class="token punctuation">{</span>
+  	<span class="token directive"><span class="token keyword">listen</span> <span class="token number">80</span></span><span class="token punctuation">;</span>
+    server_name www.inotes.top <span class="token comment">##如果主机的ip地址更改如重连了无线，则需要将去对应网站修改域名解析</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+	
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>在vm（虚拟机）中配置NAT网络设置，Mac通过command+','调出偏好设置</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>  &amp;lt;img src=&quot;/Users/qyp/Desktop/屏幕快照 2021-01-05 23.38.15.png&quot; alt=&quot;屏幕快照 2021-01-05 23.38.15&quot; style=&quot;zoom:50%;&quot; /&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>重启network</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>service network restart
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这样就把虚拟机的ip:post和主机的端口映射，这里的虚拟机端口应与nignx对应，相当于将主机当做一个路由而虚拟机为一个分机</p> <p>最后需要在路由器页面设置DMZ主机</p> <p>![屏幕快照 2021-01-05 23.43.56](/Users/qyp/Desktop/屏幕快照 2021-01-05 23.43.56.png)</p> <p>如果连接有线，可以固定本机ip</p> <p>在路由设置 &gt;&gt; 网络参数中设置</p></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/08/31, 22:59:08</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><!----> <a href="/vblog/pages/e8312f/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">11-分页器</div></a></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/vblog/pages/e8312f/">11-分页器</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/vblog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/vblog/pages/770012/"><div>es9新增正则匹配特性</div></a> <span>09-03</span></dt></dl><dl><dd>02</dd> <dt><a href="/vblog/pages/858076/"><div>实现动画的四种方法</div></a> <span>09-01</span></dt></dl><dl><dd>03</dd> <dt><a href="/vblog/pages/82d507/"><div>关于</div></a> <span>08-31</span></dt></dl> <dl><dd></dd> <dt><a href="/vblog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:307097167@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/zzzpandaQian" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2020-2021
+    <span><a href='https://beian.miit.gov.cn'>浙ICP备2021033886号-1</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"></div></div>
+    <script src="/vblog/assets/js/app.b6320eca.js" defer></script><script src="/vblog/assets/js/2.0faa9b21.js" defer></script><script src="/vblog/assets/js/137.48a82b15.js" defer></script>
+  </body>
+</html>
